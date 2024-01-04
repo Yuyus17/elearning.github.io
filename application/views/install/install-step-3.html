@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Install - {{ parent() }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="module span8 offset2">
+            <div class="module-head">
+                <span class="pull-right"><b>Step 3 : </b>Pengaturan data</span>
+                <h3>Install e-learning</h3>
+            </div>
+
+            <div class="module-body">
+                <div class="well well-small" style="box-shadow: none;">
+                    Atur Kelas dan Mata Pelajaran yang ada di sekolah. Kelas dan Mata Pelajaran masih dapat diubah.
+                </div>
+                <form method="post" action="{{ site_url('setup/index/3') }}">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <b>Kelas</b>
+                            <hr style="margin-top: 5px; margin-bottom: 5px;">                            
+                            <ul class="unstyled">
+                                <li>
+                                    KELAS X
+                                    <ul class="unstyled" style="margin-left: 20px;">
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[X][]" {{ set_checkbox('kelas[X][]', 'TKJ 1', true) }} value="TKJ 1" style="margin-top: -5px;"> KELAS X - TKJ 1
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[X][]" {{ set_checkbox('kelas[X][]', 'TKJ 2', true) }} value="TKJ 2" style="margin-top: -5px;"> KELAS X - TKJ 2
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[X][]" {{ set_checkbox('kelas[X][]', 'TKJ 3', true) }} value="TKJ 3" style="margin-top: -5px;"> KELAS X - TKJ 3
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    KELAS XI
+                                    <ul class="unstyled" style="margin-left: 20px;">
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[XI][]" {{ set_checkbox('kelas[XI][]', 'TKJ 1', true) }} value="TKJ 1" style="margin-top: -5px;"> KELAS XI - TKJ 1
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[XI][]" {{ set_checkbox('kelas[XI][]', 'TKJ 2', true) }} value="TKJ 2" style="margin-top: -5px;"> KELAS XI - TKJ 2
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[XI][]" {{ set_checkbox('kelas[XI][]', 'TKJ 3', true) }} value="TKJ 3" style="margin-top: -5px;"> KELAS XI - TKJ 3
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    KELAS XII
+                                    <ul class="unstyled" style="margin-left: 20px;">
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[XII][]" {{ set_checkbox('kelas[XII][]', 'TKJ 1', true) }} value="TKJ 1" style="margin-top: -5px;"> KELAS XII - TKJ 1
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[XII][]" {{ set_checkbox('kelas[XII][]', 'TKJ 2', true) }} value="TKJ 2" style="margin-top: -5px;"> KELAS XII - TKJ 3
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="kelas[XII][]" {{ set_checkbox('kelas[XII][]', 'TKJ 3', true) }} value="TKJ 3" style="margin-top: -5px;"> KELAS XII - TKJ 3
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div class="span8">
+                            <b>Mata Pelajaran</b>
+                            <hr style="margin-top: 5px; margin-bottom: 5px;">
+                            <ul class="unstyled">
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Administrasi Infrastruktur Jaringan (AIJ)', true) }} name="mapel[]" value="Administrasi Infrastruktur Jaringan (AIJ)" style="margin-top: -5px;"> Administrasi Infrastruktur Jaringan (AIJ)
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'BAdministrasi Sistem Jaringan (ASJ)', true) }} name="mapel[]" value="Administrasi Sistem Jaringan (ASJ)" style="margin-top: -5px;"> Administrasi Sistem Jaringan (ASJ)
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Bahasa Indonesia', true) }} name="mapel[]" value="Bahasa Indonesia" style="margin-top: -5px;"> Bahasa Indonesia
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Bahasa Inggris', true) }} name="mapel[]" value="Bahasa Inggris" style="margin-top: -5px;"> Bahasa Inggris
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Bahasa Jawa', true) }} name="mapel[]" value="Bahasa Jawa" style="margin-top: -5px;"> Bahasa Jawa
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Bimbingan Konseling', true) }} name="mapel[]" value="Bimbingan Konseling" style="margin-top: -5px;"> Bimbingan Konseling
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Dasar Program Keahlian (TKJ)', true) }} name="mapel[]" value="Dasar Program Keahlian (TKJ)" style="margin-top: -5px;"> Dasar Program Keahlian (TKJ)
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Informatika', true) }} name="mapel[]" value="Informatika" style="margin-top: -5px;"> Informatika
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Matematika', true) }} name="mapel[]" value="Matematika" style="margin-top: -5px;"> Matematika
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Pendidikan Agama Islam', true) }} name="mapel[]" value="Pendidikan Agama Islam" style="margin-top: -5px;"> Pendidikan Agama Islam
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Pendidikan Pancasila dan Kewarganegaraan', true) }} name="mapel[]" value="Pendidikan Pancasila dan Kewarganegaraan" style="margin-top: -5px;"> Pendidikan Pancasila dan Kewarganegaraan
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Penjasorkes', true) }} name="mapel[]" value="Penjasorkes" style="margin-top: -5px;"> Penjasorkes
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Produk Kreatif dan Kewirausahaan', true) }} name="mapel[]" value="Produk Kreatif dan Kewirausahaan" style="margin-top: -5px;"> Produk Kreatif dan Kewirausahaan
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Projek IPAS', true) }} name="mapel[]" value="Projek IPAS" style="margin-top: -5px;"> Projek IPAS
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Sejarah Indonesia', true) }} name="mapel[]" value="Sejarah Indonesia" style="margin-top: -5px;"> Sejarah Indonesia
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Seni Budaya', true) }} name="mapel[]" value="Seni Budaya" style="margin-top: -5px;"> Seni Budaya
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Teknologi Jaringan Berbasis Luas (WAN)', true) }} name="mapel[]" value="Teknologi Jaringan Berbasis Luas (WAN)" style="margin-top: -5px;"> Teknologi Jaringan Berbasis Luas (WAN)
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" {{ set_checkbox('mapel[]', 'Teknologi Layanan Jaringan', true) }} name="mapel[]" value="Teknologi Layanan Jaringan" style="margin-top: -5px;"> Teknologi Layanan Jaringan
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="btn btn-primary" type="submit">Simpan</button>
+                </form>
+            </div>
+    </div>
+</div>
+{% endblock %}
