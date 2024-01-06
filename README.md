@@ -19,6 +19,8 @@ Untuk pengguna terbagi menjadi tiga, yaitu:
 - Pengajar
 - Administrator (Pengajar yang bertindak sebagai administrator)
 
+untuk memulai, silahkan klik tautan berikut http://localhost/elearning-pjbl/index.php/login
+
 Modified:
 New Elearning (LMS) dokumenary
 By     : http://www.dokumenary.net
